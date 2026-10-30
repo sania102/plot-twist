@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: plot-twist
+    runtime: docker
+    plan: free
+    envVars:
+      - {key: QLOO_API_KEY, sync: false}
+      - {key: LLM_API_KEY, sync: false}

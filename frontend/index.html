@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PLOT TWIST · Where Culture Changes the Scene</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5ff;--ink:#1d1a3b;--mut:#625f82;--iris:#6c5ce7;--mint:#18b5a4;--sun:#ffc24b;--rose:#ff7aa8;--card:#fff;--line:#e4e0fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Bricolage Grotesque",system-ui,sans-serif;overflow-x:hidden}
+.blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.5;z-index:-1;animation:drift 18s ease-in-out infinite alternate}
+.b1{width:420px;height:420px;background:#cfc8ff;top:-120px;left:-100px}.b2{width:380px;height:380px;background:#ffd9e6;top:30%;right:-120px;animation-delay:-6s}.b3{width:360px;height:360px;background:#c6f3ec;bottom:-120px;left:30%;animation-delay:-11s}
+@keyframes drift{to{transform:translate(60px,40px) scale(1.15)}}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 5vw;position:sticky;top:0;backdrop-filter:blur(14px);background:#f7f5ffcc;z-index:5;border-bottom:1px solid var(--line)}
+.logo{font:800 1.25rem "Bricolage Grotesque";letter-spacing:-.02em}.logo i{font:italic 400 1.4rem "Instrument Serif";color:var(--iris)}
+.seg{position:relative;display:flex;background:#fff;border:1px solid var(--line);border-radius:99px;padding:4px}
+.seg button{position:relative;z-index:1;border:0;background:none;padding:8px 20px;border-radius:99px;font:600 .95rem inherit;color:var(--mut);cursor:pointer;transition:color .3s}
+.seg button.on{color:#fff}.pill{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);background:var(--iris);border-radius:99px;transition:transform .45s cubic-bezier(.3,1.4,.5,1)}
+.seg[data-m=studio] .pill{transform:translateX(100%)}
+main{max-width:1080px;margin:auto;padding:0 5vw 80px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:70px 0 40px}
+h1{font:800 clamp(2.6rem,6vw,4.6rem)/.98 "Bricolage Grotesque";letter-spacing:-.045em;margin:0 0 18px}
+h1 em{font:italic 400 1.08em "Instrument Serif";color:var(--iris)}
+.lead{color:var(--mut);font-size:1.15rem;max-width:34ch}
+.frames{position:relative;height:340px;perspective:900px}
+.fr{position:absolute;width:230px;height:290px;left:50%;top:20px;margin-left:-115px;border-radius:22px;padding:22px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;font:400 1.7rem/1.1 "Instrument Serif";box-shadow:0 24px 50px -20px #6c5ce77a;transform-style:preserve-3d;cursor:pointer;transition:transform .8s cubic-bezier(.2,1.2,.3,1);animation:deal 1.1s cubic-bezier(.2,1.2,.3,1) backwards}
+.fr small{font:600 .75rem "Bricolage Grotesque";opacity:.85;margin-bottom:8px}
+.f1{background:linear-gradient(160deg,#8b7bff,#6c5ce7);transform:rotate(-12deg) translateX(-70px);animation-delay:.1s}
+.f2{background:linear-gradient(160deg,#ff9bbd,#ff6f9f);transform:rotate(-1deg);animation-delay:.3s;z-index:2}
+.f3{background:linear-gradient(160deg,#2fd3bf,#18a898);transform:rotate(11deg) translateX(70px);animation-delay:.5s}
+.fr:hover{transform:rotate(0) translateY(-14px) rotateY(180deg)}.fr:hover>*{transform:rotateY(180deg);display:block}
+@keyframes deal{from{transform:translateY(60px) rotate(0) scale(.7);opacity:0}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:0 20px 50px -30px #6c5ce766;margin-top:18px;animation:pop .5s cubic-bezier(.2,1.2,.3,1)}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.98)}}
+h2{font:800 1.7rem "Bricolage Grotesque";letter-spacing:-.03em;margin:0 0 4px}.sub{color:var(--mut);margin:0 0 18px}
+label{display:block;font-weight:600;font-size:.88rem;margin:14px 0 6px}
+input,textarea,select{width:100%;padding:13px 16px;border:1.5px solid var(--line);border-radius:14px;font:inherit;background:#fcfbff;color:var(--ink);transition:border .2s,box-shadow .2s}
+input:focus,textarea:focus,select:focus,button:focus-visible{outline:none;border-color:var(--iris);box-shadow:0 0 0 4px #6c5ce725}
+.row{display:flex;gap:10px}.row>*{flex:1}.row select{flex:0 0 140px}
+.btn{border:0;background:var(--iris);color:#fff;font:600 1rem inherit;padding:14px 26px;border-radius:16px;cursor:pointer;margin-top:18px;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 24px -10px var(--iris)}
+.btn:hover{transform:translateY(-2px) scale(1.02)}.btn:active{transform:scale(.97)}.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.sug{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{display:inline-flex;gap:6px;align-items:center;border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:6px 14px;font:600 .88rem inherit;cursor:pointer;animation:pop .3s}
+.chip.sel{background:#ece9ff;border-color:var(--iris);color:var(--iris)}.chip:hover{transform:translateY(-2px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;margin-top:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;animation:pop .5s backwards;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 22px 40px -22px #6c5ce799}
+.card .img{height:150px;background:linear-gradient(135deg,#e7e3ff,#ffe3ee);background-size:cover;background-position:center}
+.card div.b{padding:14px 16px}.card h4{margin:0;font-size:1.05rem}.card p{margin:6px 0 0;color:var(--mut);font-size:.88rem}
+.tag{display:inline-block;font:600 .72rem inherit;padding:3px 10px;border-radius:99px;background:#d9f7f2;color:#0b7f72;margin-top:8px}
+.tag.ai{background:#fff0c9;color:#8a5b00}.tag.bad{background:#ffe0e8;color:#b0204a}
+.dir{border-left:6px solid var(--iris);padding-left:22px;margin-top:26px}.dir:nth-child(3n+2){border-color:var(--rose)}.dir:nth-child(3n){border-color:var(--mint)}
+.dir h3{font:italic 400 2rem "Instrument Serif";margin:0}.dir dl{display:grid;grid-template-columns:110px 1fr;gap:6px 14px;margin:14px 0}.dir dt{font-weight:800;color:var(--mut);font-size:.85rem}.dir dd{margin:0}
+.note{background:#fff8e1;border:1px solid #ffe5a0;border-radius:14px;padding:12px 16px;font-size:.9rem;margin-top:14px}.err{background:#ffe9ee;border-color:#ffc2d1}
+details{margin-top:16px}summary{cursor:pointer;font-weight:600;color:var(--iris)}
+.spin{display:inline-block;width:16px;height:16px;border:3px solid #fff8;border-top-color:#fff;border-radius:50%;animation:r .8s linear infinite;vertical-align:-3px;margin-right:8px}@keyframes r{to{transform:rotate(1turn)}}
+footer{text-align:center;color:var(--mut);font-size:.85rem;padding:30px}
+[hidden]{display:none!important}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.dir dl{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.dirw{display:grid;grid-template-columns:250px 1fr;gap:28px;margin-top:34px;align-items:start}.dirw .dir{margin-top:0}
+.poster{position:relative;aspect-ratio:2/3;border-radius:16px;overflow:hidden;color:#fff;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;background:radial-gradient(circle at 75% 22%,#ffffff55 0 14%,#fff0 15%),linear-gradient(165deg,var(--a),var(--b) 60%,var(--c));box-shadow:0 30px 50px -24px var(--a);animation:pop .6s}
+.poster .art{position:absolute;inset:0;background-size:cover;background-position:center}
+.poster:after{content:"";position:absolute;inset:0;background:linear-gradient(#0000 38%,#000b)}.poster>*:not(.art){position:relative;z-index:1}
+.poster small{font-weight:600;opacity:.9}.poster h5{font:400 2.3rem/.95 "Instrument Serif";margin:6px 0}.poster .tg{font-size:.82rem;margin:0}.poster .cr{font-size:.65rem;opacity:.85;margin-top:10px}
+.sm{padding:9px 16px;font-size:.85rem;margin-top:10px;width:100%}.beats{margin:0;padding-left:18px}.beats li{margin-bottom:4px}
+.map{display:block;width:100%;max-width:640px;margin:18px auto 0}.map line{stroke:#cdc6ff;stroke-width:1.5;stroke-dasharray:240;stroke-dashoffset:240;animation:dr 1s forwards}@keyframes dr{to{stroke-dashoffset:0}}.map g{animation:pop .5s backwards}.map text{font:600 11px "Bricolage Grotesque";fill:#1d1a3b}
+@media(max-width:800px){.dirw{grid-template-columns:1fr}}
+.poster.real:after{display:none}.poster.real{padding:0}a.btn{display:block;text-align:center;text-decoration:none}.cp{margin:0 0 8px;font-size:.92rem}
+.poster.real img{width:100%;height:100%;display:block;object-fit:cover}
+</style></head><body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<header><div class="logo">PLOT <i>twist</i></div>
+<div class="seg" id="seg" data-m="fan" role="tablist"><span class="pill"></span><button class="on" data-m="fan" role="tab">I'm a fan</button><button data-m="studio" role="tab">I'm a studio</button></div></header>
+<main>
+<section class="hero"><div><h1>Where culture <em>changes</em> the scene.</h1>
+<p class="lead">Find what you'll love next, or give one film a different campaign for every market. Every pick is backed by real Qloo taste data.</p></div>
+<div class="frames" aria-hidden="true"><div class="fr f1"><small>Same film</small><span>Tokyo</span></div><div class="fr f2"><small>Different market</small><span>London</span></div><div class="fr f3"><small>New scene</small><span>São Paulo</span></div></div></section>
+<div id="status"></div>
+
+<section id="fan" class="panel"><h2>Find your next obsession</h2><p class="sub">Pick up to 5 things you love. We'll find what connects to them.</p>
+<div class="row"><input id="fq" placeholder="Search a film, artist or brand…" aria-label="Search"><select id="ft"><option value="urn:entity:movie">Films</option><option value="urn:entity:artist">Artists</option><option value="urn:entity:brand">Brands</option></select></div>
+<div class="sug" id="fs"></div><label>Your picks</label><div class="sug" id="fp"><span class="sub">Nothing yet. Search above and tap a result.</span></div>
+<div class="row" style="align-items:center"><button class="btn" id="fgo" disabled>Find what's next</button><select id="fout" style="flex:0 0 160px;margin-top:18px"><option value="urn:entity:movie">Show films</option><option value="urn:entity:artist">Show artists</option><option value="urn:entity:brand">Show brands</option></select></div>
+<div id="fm"></div><div id="fr" class="grid"></div></section>
+
+<section id="studio" class="panel" hidden><h2>THE CULTURAL CUT</h2><p class="sub">One film, up to 3 markets, three distinct campaign directions. The story never changes.</p>
+<div class="row"><div><label>Film title or alias</label><input id="t" maxlength="100"></div><div><label>Genre</label><input id="g" maxlength="60"></div></div>
+<label>Logline</label><textarea id="l" rows="3" maxlength="1200" placeholder="One or two sentences on the story"></textarea>
+<label>What must stay unchanged</label><textarea id="u" rows="2" maxlength="800" placeholder="Plot facts and character rules marketing must respect"></textarea>
+<label>Markets (cities or countries, comma separated, max 3)</label><input id="m" placeholder="Tokyo, Dubai, London">
+<label>Comparable films (optional, improves evidence)</label><input id="sq" placeholder="Search a comparable film…"><div class="sug" id="ss"></div><div class="sug" id="sp"></div>
+<label>Cast you can promote (comma separated)</label><input id="cs" maxlength="300" placeholder="Actor names">
+<label>Story moments or lines you are happy to show in the trailer</label><textarea id="mo" rows="3" maxlength="1500" placeholder="e.g. The heroine finds the hidden map. &quot;The sea keeps its promises.&quot; The race across the cliffs."></textarea>
+<label>Original film poster (optional, used to tailor the artwork)</label><input type="file" id="pf" accept="image/jpeg,image/png,image/webp"><img id="pv" alt="Poster preview" hidden style="max-height:160px;border-radius:12px;margin-top:10px">
+<button class="btn" id="sgo">Run the Cultural Cut</button><div id="sr"></div></section>
+</main>
+<footer>PLOT TWIST · Taste data from Qloo · AI output is labelled as hypothesis · Open source (MIT)</footer>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+async function api(p,o){const r=await fetch('/api'+p,o),j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.detail||'Something went wrong. Try again.');return j}
+const post=(p,b)=>api(p,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)});
+const note=(t,bad)=>`<div class="note ${bad?'err':''}">${esc(t)}</div>`;
+const when=t=>new Date(t).toLocaleString();
+// mode switch
+$('#seg').onclick=e=>{const m=e.target.dataset.m;if(!m)return;$('#seg').dataset.m=m;document.querySelectorAll('.seg button').forEach(b=>b.classList.toggle('on',b.dataset.m===m));$('#fan').hidden=m!=='fan';$('#studio').hidden=m!=='studio'};
+api('/health').then(h=>{if(!h.qloo)$('#status').innerHTML=note('Qloo is not connected on this server, so searches will show an unavailable message instead of results.',1)}).catch(()=>{});
+// picker
+function picker(q,sug,pk,type,max,onc){const P=[];let tm;
+ const draw=()=>{$(pk).innerHTML=P.length?P.map((p,i)=>`<button class="chip sel" data-i="${i}" title="Remove">${esc(p.name)} ✕</button>`).join(''):'<span class="sub">Nothing yet. Search above and tap a result.</span>';onc(P)};
+ $(pk).onclick=e=>{const i=e.target.dataset.i;if(i!==undefined){P.splice(i,1);draw()}};
+ $(q).oninput=()=>{clearTimeout(tm);const v=$(q).value.trim();if(v.length<2){$(sug).innerHTML='';return}
+  tm=setTimeout(async()=>{try{const d=await api('/search?q='+encodeURIComponent(v)+'&type='+encodeURIComponent(type()));
+   $(sug).innerHTML=d.entities.length?d.entities.map(x=>`<button class="chip" data-id="${esc(x.id)}" data-n="${esc(x.name)}">${esc(x.name)}</button>`).join(''):'<span class="sub">No matches. Try another spelling.</span>'}catch(er){$(sug).innerHTML=note(er.message,1)}},350)};
+ $(sug).onclick=e=>{const b=e.target.closest('.chip');if(!b||P.length>=max||P.some(p=>p.id===b.dataset.id))return;P.push({id:b.dataset.id,name:b.dataset.n});draw()};
+ draw();return P}
+const fanP=picker('#fq','#fs','#fp',()=>$('#ft').value,5,P=>$('#fgo').disabled=!P.length);
+const stuP=picker('#sq','#ss','#sp',()=>'urn:entity:movie',5,()=>{});
+const card=(x,i)=>`<article class="card" style="animation-delay:${i*60}ms"><div class="img" ${x.image?`style="background-image:url('${esc(x.image)}')"`:''}></div><div class="b"><h4>${esc(x.name)}</h4><p>${esc(x.description||x.kind)}</p><span class="tag">Retrieved from Qloo${x.affinity!=null?' · affinity '+Number(x.affinity).toFixed(2):''}</span></div></article>`;
+function cmap(P,R){const W=640,H=440,cx=320,cy=220,pt=(i,n,r,o)=>{const a=6.283*i/n+o;return[cx+r*Math.cos(a),cy+r*.78*Math.sin(a)]},t=n=>esc(n.length>18?n.slice(0,17)+'…':n);let s=`<svg class="map" viewBox="0 0 ${W} ${H}" role="img" aria-label="Culture map of your picks and Qloo recommendations">`,N=[];
+R.forEach((x,i)=>{const[X,Y]=pt(i,R.length,190,-1.57);s+=`<line x1="${cx}" y1="${cy}" x2="${X}" y2="${Y}" style="animation-delay:${i*60}ms"/>`;N.push(`<g style="animation-delay:${i*60+300}ms"><circle cx="${X}" cy="${Y}" r="9" fill="#18b5a4"/><text x="${X}" y="${Y+24}" text-anchor="middle">${t(x.name)}</text></g>`)});
+P.forEach((x,i)=>{const[X,Y]=pt(i,P.length,75,-1.2);s+=`<line x1="${cx}" y1="${cy}" x2="${X}" y2="${Y}"/>`;N.push(`<g><circle cx="${X}" cy="${Y}" r="12" fill="#6c5ce7"/><text x="${X}" y="${Y-18}" text-anchor="middle">${t(x.name)}</text></g>`)});
+return s+N.join('')+`<g><circle cx="${cx}" cy="${cy}" r="26" fill="#ff7aa8"/><text x="${cx}" y="${cy+4}" text-anchor="middle" style="fill:#fff">You</text></g></svg><p class="sub" style="text-align:center">Purple: your picks. Green: what Qloo returned for them together.</p>`}
+$('#fgo').onclick=async e=>{const b=e.target;b.disabled=true;b.innerHTML='<span class="spin"></span>Asking Qloo…';
+ try{const d=await post('/discover',{ids:fanP.map(p=>p.id),type:$('#fout').value});
+  $('#fm').innerHTML=d.entities.length?cmap(fanP,d.entities):'';
+  $('#fr').innerHTML=d.entities.length?d.entities.map(card).join(''):note('Qloo returned no matches for these picks. Try different ones.');
+  $('#fr').insertAdjacentHTML('beforeend',`<p class="sub" style="grid-column:1/-1">Retrieved ${esc(when(d.retrieved_at))}. Affinity means how strongly a thing connects to your picks. It is not a rating.</p>`)}
+ catch(er){$('#fr').innerHTML=note(er.message,1)}b.disabled=false;b.textContent="Find what's next"};
+const ev=(m,d)=>`<details><summary>Evidence for ${esc(m)}</summary>${Object.entries(d).map(([k,v])=>`<p><b>${esc(k)}</b> <span class="tag ${v.status==='retrieved'?'':'bad'}">${esc(v.status)}</span><br>${v.entities.length?v.entities.map(e=>esc(e.name)).join(', '):esc(v.reason||'No results')}</p>`).join('')}</details>`;
+$('#sgo').onclick=async e=>{const b=e.target,markets=$('#m').value.split(',').map(s=>s.trim()).filter(Boolean).slice(0,3);
+ if(!$('#t').value.trim()||$('#l').value.trim().length<10||!markets.length){$('#sr').innerHTML=note('Add a title, a logline (10+ characters) and at least one market.',1);return}
+ b.disabled=true;b.innerHTML='<span class="spin"></span>Waiting for Qloo and the AI model…';
+ try{const d=await post('/cultural-cut',{title:$('#t').value,logline:$('#l').value,genre:$('#g').value,cast:$('#cs').value,moments:$('#mo').value,unchanged:$('#u').value,markets,seeds:stuP.map(p=>p.id)});
+  let h=`<p class="sub" style="margin-top:22px">Evidence retrieved ${esc(when(d.retrieved_at))}</p>`;
+  if(d.ai.status!=='ai_generated_hypothesis')h+=note('AI directions unavailable: '+d.ai.reason+' The Qloo evidence below is still real.',1);
+  window.D=d.ai.directions;const pal=p=>{const df=['#6c5ce7','#ff7aa8','#18b5a4'];return df.map((c,i)=>/^#[0-9a-f]{6}$/i.test((p||[])[i])?p[i]:c)},ol=a=>`<ol class="beats">${[].concat(a||[]).map(t=>`<li>${esc(t)}</li>`).join('')}</ol>`;
+  h+=d.ai.directions.map((x,i)=>{const[A,B,C]=pal(x.palette),tr=x.trailer&&!Array.isArray(x.trailer)?x.trailer:{scenes:x.trailer},cp=Array.isArray(x.cast_plan)?x.cast_plan:[];
+  const po=POSTER?`<div class="poster real" style="aspect-ratio:${PW}/${PH}"><img id="im${i}" alt="Poster tailored for ${esc(x.market)}"></div><a class="btn sm" id="dl${i}" download="poster-${esc(x.market)}.png">Download tailored poster</a><p class="cp">Your original artwork is untouched. Only a colour grade, a local-language tagline and small stickers are added.</p>`:`<div class="poster" id="po${i}" style="--a:${A};--b:${B};--c:${C}"><div class="art"></div><small>${esc(x.market)}</small><h5>${esc($('#t').value)}</h5><p class="tg">${esc(x.tagline||(x.headlines||[])[0])}</p><div class="cr">${esc((x.evidence||[]).slice(0,4).join(' · '))}</div></div>`;
+  return `<div class="dirw"><div>${po}</div><div class="dir"><h3>${esc(x.name)}</h3><span class="tag ai">AI-generated hypothesis · ${esc(x.market)}</span><dl><dt>Poster idea</dt><dd>${esc(x.poster)}</dd><dt>Trailer</dt><dd><b>Hook:</b> ${esc(tr.hook)}<br><b>Show these moments:</b>${ol(tr.scenes)}<b>Ending:</b> ${esc(tr.ending)}<br><b>Theatre or OTT:</b> ${esc(tr.watch_plan)}</dd><dt>Cast plan</dt><dd>${cp.map(c=>`<p class="cp"><b>${esc(c.who)}</b> · ${esc(c.timing)}<br>Where: ${esc(c.where)}<br>How: ${esc(c.how)}</p>`).join('')||'No cast given'}</dd><dt>Music</dt><dd>${esc(x.music)}</dd><dt>Styling</dt><dd>${esc(x.styling)}</dd><dt>Headlines</dt><dd>${(x.headlines||[]).map(esc).join('<br>')}</dd><dt>Why</dt><dd>${esc(x.rationale)}</dd><dt>Evidence</dt><dd>${(x.evidence||[]).map(n=>`<span class="tag">${esc(n)}</span> `).join('')||'None cited'}</dd><dt>Unchanged</dt><dd>${esc(x.unchanged)}</dd></dl></div></div>`}).join('');
+  const mx=d.matrix;h+=`<div class="note" style="background:#eefaf7;border-color:#bfeee6"><b>Cross-market comparison</b> <span class="tag">Computed from Qloo results</span><p><b>Shared by several markets:</b> ${mx.shared.map(esc).join(', ')||'nothing in common, so each market needs its own campaign'}</p>${Object.entries(mx.unique).map(([m,l])=>`<p><b>Only ${esc(m)}:</b> ${l.slice(0,10).map(esc).join(', ')||'none'}</p>`).join('')}</div>`;
+  h+=Object.entries(d.evidence).map(([m,v])=>ev(m,v)).join('')+note(d.limits);$('#sr').innerHTML=h;if(POSTER)d.ai.directions.forEach(tailor)}
+ catch(er){$('#sr').innerHTML=note(er.message,1)}b.disabled=false;b.textContent='Run the Cultural Cut'};
+let POSTER=null,PW=0,PH=0;
+$('#pf').onchange=e=>{const f=e.target.files[0];POSTER=null;$('#pv').hidden=true;if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,1024/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);POSTER=c.toDataURL('image/jpeg',.85);PW=c.width;PH=c.height;$('#pv').src=POSTER;$('#pv').hidden=false};im.onerror=()=>{$('#sr').innerHTML=note('That file is not a readable image.',1)};im.src=r.result};r.readAsDataURL(f)};
+function wrap(c,t,w){const sp=/\s/.test(t),a=sp?t.split(/\s+/):[...t],L=[];let l='';for(const k of a){const n=l?l+(sp?' ':'')+k:k;if(c.measureText(n).width>w&&l){L.push(l);l=k}else l=n}if(l)L.push(l);return L}
+function tailor(x,i){const im=new Image();im.onload=()=>{const W=im.width,H=im.height,c=document.createElement('canvas');c.width=W;c.height=H;const g=c.getContext('2d'),s=W/600,df=['#6c5ce7','#ff7aa8','#18b5a4'],[A,B,C]=df.map((d,k)=>/^#[0-9a-f]{6}$/i.test((x.palette||[])[k])?x.palette[k]:d);
+ g.drawImage(im,0,0);let gr=g.createLinearGradient(0,0,0,H);gr.addColorStop(0,A);gr.addColorStop(1,C);g.globalCompositeOperation='soft-light';g.globalAlpha=.55;g.fillStyle=gr;g.fillRect(0,0,W,H);g.globalAlpha=1;g.globalCompositeOperation='source-over';
+ gr=g.createLinearGradient(0,0,0,H*.24);gr.addColorStop(0,'#000000cc');gr.addColorStop(1,'#00000000');g.fillStyle=gr;g.fillRect(0,0,W,H*.24);
+ const t=x.tagline_local||x.tagline||'';g.fillStyle='#fff';g.textAlign='center';g.textBaseline='top';g.direction=/[\u0590-\u08FF]/.test(t)?'rtl':'ltr';g.font=`700 ${30*s}px "Noto Sans JP","Noto Sans Arabic","Bricolage Grotesque",system-ui,sans-serif`;
+ wrap(g,t,W*.84).slice(0,3).forEach((ln,k)=>g.fillText(ln,W/2,22*s+k*38*s));g.direction='ltr';
+ g.strokeStyle='#ffffffcc';g.lineWidth=5*s;g.strokeRect(12*s,12*s,W-24*s,H-24*s);
+ const chip=(txt,x0,y0,col,right)=>{g.font=`700 ${19*s}px "Noto Sans JP","Noto Sans Arabic","Bricolage Grotesque",system-ui,sans-serif`;const w=g.measureText(txt).width+34*s,h=36*s,xx=right?x0-w:x0;g.fillStyle='#1d1a3be6';g.beginPath();g.roundRect(xx,y0,w,h,h/2);g.fill();g.fillStyle=col;g.beginPath();g.arc(xx+17*s,y0+h/2,6*s,0,6.3);g.fill();g.fillStyle='#fff';g.textAlign='left';g.textBaseline='middle';g.fillText(txt,xx+29*s,y0+h/2)};
+ chip(x.market,28*s,H-68*s,B,false);if(x.badge)chip(x.badge,W-28*s,H-68*s,A,true);
+ const u=c.toDataURL('image/png');$('#im'+i).src=u;$('#dl'+i).href=u};im.src=POSTER}
+</script></body></html>
